@@ -31,13 +31,13 @@ Your finished project must include all of the following requirements:
 A _"test"_ script already exists you can use to run tests against your code.
 A _"resetdb"_ script exists that allows you to reset the database to its original state.
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
-- [ ] Install _nodemon_ as a development dependency that would not be used in production.
+- [x] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
+- [x] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
+- [x] Install _nodemon_ as a development dependency that would not be used in production.
 
 #### Environment Variables
 
-- [ ] Bring the port number from the `process.env` variable, falling back to `9000` if `process.env.PORT` is undefined **!!!**
+- [x] Bring the port number from the `process.env` variable, falling back to `9000` if `process.env.PORT` is undefined **!!!**
 
 #### Endpoints
 
@@ -65,9 +65,9 @@ Inside `api/projects/projects-router.js` build the following endpoints:
 
 Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
 
-- [ ] `[GET] /api/actions`
+- [x] `[GET] /api/actions`
   - Returns an array of actions (or an empty array) as the body of the response.
-- [ ] `[GET] /api/actions/:id`
+- [x] `[GET] /api/actions/:id`
   - Returns an action with the given `id` as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
 - [ ] `[POST] /api/actions`
@@ -147,7 +147,21 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+Node.js allows the client and the server to use the same language, making it easier to share info between the two. Express utilizies middleware to expand it's capabilities.
+
 1. Understand and explain the use of Middleware.
+
+Middleware can handle the full lifecycle of a function, it can execute a code, make changes to it and responds to objects, aand can end the request-response cycle.
+
 1. The basic principles of the REST architectural style.
+
+It allows systems to access web resources by using a uniform set of predifined rules
+
 1. Understand and explain the use of Express Routers.
+
+An express router can be a complete middleware and routing system. You can use it to create modular, mountaible route handlers.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+There are various software that you can use, like Postman or Httpie to check in realtime how the app is changing and responding to updates.
